@@ -1,0 +1,118 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: "Times New Roman", Times, serif;
+
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  flex-grow: 1;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+.titular {
+  padding: 1rem;
+  background-color: slateblue;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.menu a[href="#"] {
+  text-decoration: none;
+  margin: 0.15rem;
+  padding: 0.5rem;
+  background-color: black;
+  color: white;
+  border: thin solid white;
+  border-radius: 0.3rem;
+}
+
+.hero-image {
+  min-height: 100vh;
+  background-image: url("https://placeimg.com/1280/720/animals");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image div {
+  min-height: inherit;
+  background-color: rgb(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.flex-item {
+  flex: 0 0 50%;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    margin: 0.2rem;
+    padding: 1rem;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.menu a:hover {
+  background-color: cadetblue;
+}
+
+.flex-responsive {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flex-responsive-item {
+  border: thin solid gold;
+  flex: 1 1 200px;
+}
